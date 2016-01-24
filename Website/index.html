@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<!--
+
+* ClickerMat Website
+* Author: Jake Poirier
+* Copyright 2016
+* Colorado State University Computer Engineering
+* License: MIT
+
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Clicker Mat!</title>
+
+    <!-- Definitions for stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+
+    <!--[if IE]>
+    <script type="text/javascript">
+        var console = { log: function() {} };
+    </script>
+    <![endif]-->
+
+    <!-- Definitions for javascript imports -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <!-- Javascript to handle scrolling and menu tabs -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                sectionsColor: ['#71db71', '#cccccc', '#ccccb2', '#ccccb2', '#ccccb2', '#ccccb2'],
+                anchors: ['Home', 'Timeline', 'Team', 'Documents', 'PicsDemos', 'Acknowledgements'],
+                menu: '#menu',
+                loopTop: true,
+                loopBottom: true
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+<!-- Menu button definitions -->
+<ul id="menu">
+    <li data-menuanchor="Home" class="active"><a href="#Home">Home</a></li>
+    <li data-menuanchor="Timeline"><a href="#Timeline">Timeline</a></li>
+    <li data-menuanchor="Team"><a href="#Team">Team</a></li>
+    <li data-menuanchor="Documents"><a href="#Documents">Documents</a></li>
+    <li data-menuanchor="PicsDemos"><a href="#PicsDemos">Pictures and Demos</a></li>
+    <li data-menuanchor="Acknowledgements"><a href="#Acknowledgements">Acknowledgements</a></li>
+   <!-- <li id="support"><a href="index.html"><img src="res/jp.png"></a></li> -->
+</ul>
+
+<div id="fullpage">
+
+    <!-- Home section -->
+    <div class="section " id="section0">
+        <div class="container-fluid">
+            <div id="content">
+                <div id="feature">
+                    <h1>Documents</h1>
+                </div>
+                <div class="article column1">
+                    <p>Column One</p>
+                </div>
+                <div class="article column2">
+                    <p>Column Two</p>
+                </div>
+                <div class="article column3">
+                    <p>Column Three</p>
+                </div>
+            </div>
+
+        </div>
+        <h1>Clicker Mat!</h1>
+        <img src="res/kids.jpg" alt="fullPage" height="400" width="300" />
+    </div>
+
+    <!-- Timeline section -->
+    <div class="section" id="section1">
+
+        <div class="container-fluid">
+            <div id="content">
+                <div id="feature">
+                    <h1>Timeline</h1>
+                </div>
+                <div class="article column1">
+                    <h2>Stage 1</h2>
+                    <p>September 16th: Preliminary Project Plan, Website Launch <br></p>
+                    <p>  September 23rd: Notebook Check 1 <br></p>
+                    <p>  September 29th: Revised Project Plan <br></p>
+                    <p>  October 1st: Order Critical Components</p>
+                </div>
+                <div class="article column2">
+                    <h2>Stage 1</h2>
+                    <p>September 16th: Preliminary Project Plan, Website Launch <br></p>
+                    <p>  September 23rd: Notebook Check 1 <br></p>
+                    <p>  September 29th: Revised Project Plan <br></p>
+                    <p>  October 1st: Order Critical Components</p>
+                </div>
+                <div class="article column3">
+                    <h2>Stage 1</h2>
+                    <p>September 16th: Preliminary Project Plan, Website Launch <br></p>
+                    <p>  September 23rd: Notebook Check 1 <br></p>
+                    <p>  September 29th: Revised Project Plan <br></p>
+                    <p>  October 1st: Order Critical Components</p>
+                </div>
+            </div>
+
+        </div>
+        <div id="footer">
+            <p>&copy; Copyright 2011</p>
+        </div>
+
+
+    </div>
+
+    <!-- Team section -->
+    <div class="section" id="section2">
+        <div class="slide" id="slide1">
+            <div class="intro">
+                <h1>Clicker Mat Team</h1>
+                <img src="res/grouppic.jpg" id="group" />
+                <p>
+                    This is the team blah blah blah
+                </p>
+            </div>
+        </div>
+        <div class="slide" id="slide2">
+            <h1>Jake Lord</h1>
+            <img src="res/jakelord.jpg" id="jakel" />
+            <p>
+                My name is jake Blahblahblahblah
+            </p>
+        </div>
+        <div class="slide" id="slide3">
+            <h1>Jake Lord</h1>
+            <img src="res/jakepoirier.jpg" id="jakep" />
+            <p>
+                My name is jake Blahblahblahblah
+            </p>
+        </div>
+        <div class="slide" id="slide4">
+            <div class="container-fluid">
+                <div id="content">
+                    <div id="feature">
+                        <h1>Jake Poirier</h1>
+                    </div>
+                    <div class="article column1">
+                        <p>Column One</p>
+                    </div>
+                    <div class="article column2">
+                        <img src="res/jakepoirier.jpg" id="jakep" />
+                    </div>
+                    <div class="article column3">
+                        <p>Column Three</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Documents section -->
+    <div class="section" id="section3">
+        <div class="container-fluid">
+            <div id="content">
+                <div id="feature">
+                    <h1>Documents</h1>
+                </div>
+                <div class="article column1">
+                    <p>Column One</p>
+                </div>
+                <div class="article column2">
+                    <p>Column Two</p>
+                </div>
+                <div class="article column3">
+                    <p>Column Three</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Pictures and Demos section -->
+    <div class="section " id="section4">
+        <h1>fullPage.js</h1>
+        <p>Looping Top and Bottom Enabled</p>
+        <img src="res/fullPage.png" alt="fullPage" />
+    </div>
+
+    <!-- Acknowledgements section -->
+    <div class="section " id="section5">
+        <h1>fullPage.js</h1>
+        <p>Looping Top and Bottom Enabled</p>
+        <img src="imgs/fullPage.png" alt="fullPage" />
+
+        <div id="footer">
+            <p>&copy; Copyright 2011</p>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
