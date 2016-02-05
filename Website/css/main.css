@@ -21,7 +21,7 @@
 }
 
 /* ---- Top page menu stylesheet ---- */
-#menu li {
+#menu li, .button {
     display:inline-block;
     margin: 5px;
     color: #000;
@@ -54,7 +54,7 @@
 #menu li.active a{
     color: #fff;
 }
-#menu{
+#menu {
     position:fixed;
     top:0;
     left:0;
@@ -63,20 +63,22 @@
     width: 100%;
     padding: 0;
     margin:0;
-    font-family: monospace;
+    font-family: open-sans1;
 }
+.button{
+    border: none;
+}
+
 
 /* ---- Main content for each section style ---- */
 
 .section{
     text-align:center;
-    font-family: monospace;
+    font-family: open-sans1;
 }
-#section0 h1{
-    color: #8a6d3b;
-}
+
 h1{
-    font-size: 8em;
+    font-size: 7em;
     text-align: center;
 }
 
@@ -90,11 +92,7 @@ h1{
     z-index: 9;
     text-align: center;
     color: #f2f2f2;
-    padding: 5px 0 0 0;
-    font-family: monospace;
-}
-#header{
-    top: 0;
+    font-family: open-sans1;
 }
 #footer{
     bottom: 0;
@@ -105,12 +103,11 @@ h1{
     height: 20px;
     color: #f2f2f2;
     position: fixed;
-    z-index: 70;
+    z-index: 0;
     bottom: 2%;
     width: 100%;
     text-align: center;
     font-size: 1.0em;
-    padding: 0 0 0 0px;
 }
 #infoMenu li {
     display: inline-block;
@@ -133,18 +130,93 @@ h1{
     width: 100%;
     text-align: center;
     padding: 1% 15% 1% 15%;
-    background-color: #101010;
+    background-color: #303f42;
+}
+#section0 h1{
+    color: #eec015;
 }
 
 /* --- TIMELINE style --- */
 
+#section1 h1{
+    color: #303f42;
+    font-size: 6em;
+}
+#timeline_table{
+    font-family: open-sans1;
+    border-collapse: collapse;;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
 
-.intro1{
-    float:left;
-    display:inline-block;
+}
+
+#timeline_table td, #timeline_table th {
+    border: 1px solid #d5d5d5;
+    text-align: left;
+    padding: 8px;
+}
+
+#timeline_table tr:nth-child(even){background-color: #FFFFFF;
+}
+#timeline_table tr:nth-child(odd){background-color: #d5d5d5;
+}
+
+#timeline_table tr:hover {background-color: #999999;}
+
+#timeline_table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #eec015;
+    font-size: 1.5em;
+    color: #303f42;
+}
+
+/* ---- Team page Style --- */
+
+#section2 h1{
+    color: #303f42;
+    font-size: 6em;
+}
+.team_div{
+    color: #303f42;
+    overflow: auto;
+}
+.team_text {
+    width: 25%;
+    float: left;
+    margin-left: 22%;
+    padding-top: 1em;
+    text-align: left;
+    font-size: 1.5em;
+}
+.team_pic_div{
+    width: 20%;
+    float: left;
+    padding-top: 1em;
+}
+.team_pic{
+    border: 3px solid white;
+}
+.team_text_1{
+    width: 35%;
+    margin-left: 20%;
+    padding-right: 1em;
+    font-size: 1.5em;
 }
 
 
 
 
 
+
+
+/* ---- development section style --- */
+
+
+.column1, .column2, .column3 {
+    width: 31.3%;
+    float: left;
+    margin: 1%;}
+.column3 {
+    margin-right: 0%;}

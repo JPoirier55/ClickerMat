@@ -12,6 +12,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Clicker Mat!</title>
 
@@ -33,12 +34,27 @@
     <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
     <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
+    <script>
+
+        //adding the actions to the buttons
+        var scroll = true;
+        $(document).on('click', '#toggle', function(){
+            if(!scroll){
+                $.fn.fullpage.setAutoScrolling(true);
+                scroll = true;
+            }else{
+                $.fn.fullpage.setAutoScrolling(false);
+                scroll = false;
+            }
+        });
+
+    </script>
 
     <!-- Javascript to handle scrolling and menu tabs -->
     <script type="text/javascript">
         $(document).ready(function() {
             $('#fullpage').fullpage({
-                sectionsColor: ['#101010', '#cccccc', '#ccccb2', '#ccccb2', '#ccccb2', '#ccccb2'],
+                sectionsColor: ['#303f42', '#CACACA', '#eec015', '#303f42', '#CACACA', '#eec015'],
                 anchors: ['Home', 'Timeline', 'Team', 'Documents', 'PicsDemos', 'Acknowledgements'],
                 menu: '#menu',
                 loopTop: true,
@@ -52,18 +68,22 @@
 <body>
 
 <!-- Menu button definitions -->
-<ul id="menu">
-    <li data-menuanchor="Home" class="active"><a href="#Home">Home</a></li>
-    <li data-menuanchor="Timeline"><a href="#Timeline">Timeline</a></li>
-    <li data-menuanchor="Team"><a href="#Team">Team</a></li>
-    <li data-menuanchor="Documents"><a href="#Documents">Documents</a></li>
-    <li data-menuanchor="PicsDemos"><a href="#PicsDemos">Pictures and Demos</a></li>
-    <li data-menuanchor="Acknowledgements"><a href="#Acknowledgements">Acknowledgements</a></li>
-   <!-- <li id="support"><a href="index.html"><img src="res/jp.png"></a></li> -->
-</ul>
+<div class="container-fluid">
+    <ul id="menu">
+        <li data-menuanchor="Home" class="active"><a href="#Home">Home</a></li>
+        <li data-menuanchor="Timeline"><a href="#Timeline">Timeline</a></li>
+        <li data-menuanchor="Team"><a href="#Team">Team</a></li>
+        <li data-menuanchor="Documents"><a href="#Documents">Documents</a></li>
+        <li data-menuanchor="PicsDemos"><a href="#PicsDemos">Pictures and Demos</a></li>
+        <li data-menuanchor="Acknowledgements"><a href="#Acknowledgements">Acknowledgements</a></li>
+        <li data-menuanchor="" id="button"><button class="button" id="toggle">Toggle Pagescroll</button></li>
+       <!-- <li id="support"><a href="index.html"><img src="res/jp.png"></a></li> -->
 
-<div id="header"></div>
-<div id="footer">
+    </ul>
+
+</div>
+
+<div class="container-fluid" id="footer">
     <div id="infoMenu">
         <ul class="linklist">
             <li>&bull; <a href="https://advancing.colostate.edu/ENG/ECE_SRDESIGN/GIVE">Support our Program</a></li>
@@ -75,111 +95,129 @@
     </div>
 </div>
 
+
 <div id="fullpage">
     <!-- Home section -->
     <div class="section" id="section0">
-         <h1>Clicker Mat!</h1>
-                <div class="article_div">
-                    <h2>GOALS</h2>
-                    Eu nec ferri molestie consequat, vel at alia dolore putant. Labore philosophia ut vix. In vis nostrud interesset appellantur, vis et tation feugiat scripserit. Te nec noster suavitate persecuti. Diceret erroribus cu vix, alii omnes ei sit. Sea an corrumpit patrioque, virtute accumsan nominavi et usu, ex mei dolore vocibus incorrupte.
-                    Duo ea saperet tacimates. Sed possim prodesset no, per novum putent doctus ea. Eu mea magna aliquip graecis, pri corpora officiis complectitur ei, lorem saepe consetetur his ad. Meis consulatu ei vis, an altera ocurreret interesset qui.
-                    t. Cu maluisset assentior per, graecis ponderum no mel. Eum eu vitae quando gloriatur, cum graece percipitur no, sed errem maiestatis te. Sed porro epicuri te, ad nam malorum verterem. Ea zril aliquip euismod sed.
-                </div>
-                <div class="article_div">
-                    <h2>OTHER SHIT</h2>
-                    Eu nec ferri molestie consequat, vel at alia dolore putant. Lntior per, graecis ponderum no mel. Eum eu vitae quando gloriatur, cum graece percipitur no, sed errem maiestatis te. Sed porro epicuri te, ad nam malorum verterem. Ea zril aliquip euismod sed.
-                </div>
-    </div>
-
-    <!-- Timeline section -->
-    <div class="section" id="section1">
         <div class="container-fluid">
-            <div id="content">
-                <div id="feature">
-                    <h1>Timeline</h1>
-                </div>
-                <div class="article column1">
-                    <h2>Stage 1</h2>
-                    <p>September 16th: Preliminary Project Plan, Website Launch <br></p>
-                    <p>  September 23rd: Notebook Check 1 <br></p>
-                    <p>  September 29th: Revised Project Plan <br></p>
-                    <p>  October 1st: Order Critical Components</p>
-                </div>
-                <div class="article column2">
-                    <h2>Stage 1</h2>
-                    <p>September 16th: Preliminary Project Plan, Website Launch <br></p>
-                    <p>  September 23rd: Notebook Check 1 <br></p>
-                    <p>  September 29th: Revised Project Plan <br></p>
-                    <p>  October 1st: Order Critical Components</p>
-                </div>
-                <div class="article column3">
-                    <h2>Stage 1</h2>
-                    <p>September 16th: Preliminary Project Plan, Website Launch <br></p>
-                    <p>  September 23rd: Notebook Check 1 <br></p>
-                    <p>  September 29th: Revised Project Plan <br></p>
-                    <p>  October 1st: Order Critical Components</p>
-                </div>
-            </div>
+
+
+             <h1><img src="res/kang.PNG" width="100px" height="75px" style="padding-bottom: 10px;"> Hoparoo Learning System</h1>
+                    <div class="article_div">
+                        <h2>GOALS</h2>
+                        <p>Our goals for this project are to design and build an interactive learning mat we call
+                        Hoparoo! The final design guidelines are still not set in stone, but as we continue the
+                        development the finished prototype will be a set of working mats with a central receiver
+                        which a teacher or instructor can access and display results from the class. As of January
+                        2016, we have a set of <a href="deliverables.html">deliverables</a> and a tentative
+                        <a href="timeline.html">timeline</a> for the work progression. We hope to complete a working
+                        prototype by E-days so we can demonstrate the functionality.</p>
+                    </div>
+                    <div class="article_div">
+                        <h2>MARKETING INTEGRATION</h2>
+                        <p>A first for ECE senior design, the Colorado State School of Business has joined forces with
+                        the ECE department to have independent study students integrate with senior design students.
+                        With this collaborative project, we hope to gain more market knowledge and learn the process
+                        of bringing an idea from design and engineering into a consumer product.</p>
+                    </div>
         </div>
+    </div>
+    <!-- STEPS -->
+
+    <div class="section" id="section1">
+        <h1><img src="res/clock.png" width="85px" height="85px" > Timeline and Deliverables</h1>
+        <table id="timeline_table">
+            <tr>
+                <th>Deliverable</th>
+                <th>Description</th>
+                <th>Projected Date</th>
+            </tr>
+            <tr>
+                <td>Website Deployed</td>
+                <td>Senior Design website posted to T drive to describe and outline project</td>
+                <td>2/10/16</td>
+            </tr>
+            <tr>
+                <td>Project Plan and Deliverables</td>
+                <td>Document with all project deliverables and plans for the semester. Will include
+                projected budget and work timeline for all members of the team.</td>
+                <td>2/10/16</td>
+            </tr>
+            <tr>
+                <td>Working Prototype</td>
+                <td>Initial barebones prototype of a single mat or two communicating with a simple
+                server set up. Will use this for College of Business students to market to customers.</td>
+                <td>3/1/16</td>
+            </tr>
+            <tr>
+                <td>E-Days</td>
+                <td>Will have a working prototype with 3-4 mats that can be used by guests at E-days. We
+                hope to have a good prototype of mat design and some software that will show results in
+                real time for the users to see. </td>
+                <td>4/15/16</td>
+            </tr>
+            <tr>
+                <td>Finished Deliverable Product</td>
+                <td>As per request of Dan Graham, 20 mats that can be tested and used in the classroom. This
+                will make up the initial research by the College of Psychology with a working product. </td>
+                <td>4/15/16</td>
+            </tr>
+        </table>
     </div>
 
     <!-- Team section -->
     <div class="section" id="section2">
         <div class="slide" id="slide1">
-            <h1>Clicker Mat Team</h1>
-            <div class="intro1">
+            <h1><img src="res/teamicon.png" width="85px" height="85px" > Hoparoo Team</h1>
+                <div class="team_div">
+                    <div class="team_text">
+                        <p>
+                            This is the group team for this project. We are a mix
+                            of ECE Senior Design students, College of Business
+                            Marketing students and ECE 202 students. This diverse
+                            background of talent will be the key to our success in
+                            completing this project.
 
-                <img src="res/grouppic.jpg" id="group" height="200" width="200"/>
-                <p>
-                    This is the team blah blah blah
-                </p>
-                <img src="res/grouppic.jpg" id="group" height="200" width="200"/>
-                <p>
-                    This is the team blah blah blah
-                </p>
-                <img src="res/grouppic.jpg" id="group" height="200" width="200"/>
-                <p>
-                    This is the team blah blah blah
-                </p>
-                <img src="res/grouppic.jpg" id="group" height="200" width="200"/>
-                <p>
-                    This is the team blah blah blah
-                </p>
-                <img src="res/grouppic.jpg" id="group" height="200" width="200"/>
-                <p>
-                    This is the team blah blah blah
-                </p>
-            </div>
+                        </p>
+                    </div>
+                    <div class="team_pic_div">
+                        <img src="res/grouppic.jpg" class="team_pic" width="480px" height="320px" />
+                    </div>
+                </div>
         </div>
         <div class="slide" id="slide2">
-            <h1>Jake Lord</h1>
-            <img src="res/jakelord.jpg" id="jakel" />
-            <p>
-                My name is jake Blahblahblahblah
-            </p>
+            <h1><img src="res/ECE_logo.png" width="95px" height="95px" > Jake Poirier</h1>
+            <div class="team_div">
+                <div class="team_text team_text_1">
+                    <p>
+                        Jake P. is a Senior Computer engineering student at Colorado State University.
+                        He is interested in all aspects of computer science and engineering and wants
+                        to focus on software architecture and design. He is currently working for Hewlett
+                        Packard Enterprise as a software engineering intern, and works in full stack
+                        web development with Python Django framework.<br>
+
+                        Outside of school, Jake enjoys playing music, hiking, mountain biking, snowboarding,
+                        learning and reading. He also enjoys pets as his fiance is currently in her senior
+                        year of Veterinary School at CSU.
+
+                    </p>
+                </div>
+                <div class="team_pic_div">
+                    <img src="res/jakepoirier.jpg" class="team_pic" width="320px" height="320px" />
+                </div>
+            </div>
         </div>
         <div class="slide" id="slide3">
-            <h1>Jake Lord</h1>
-            <img src="res/jakepoirier.jpg" id="jakep" />
-            <p>
-                My name is jake Blahblahblahblah
-            </p>
-        </div>
-        <div class="slide" id="slide4">
-            <div class="container-fluid">
-                <div id="content">
-                    <div id="feature">
-                        <h1>Jake Poirier</h1>
-                    </div>
-                    <div class="article column1">
-                        <p>Column One</p>
-                    </div>
-                    <div class="article column2">
-                        <img src="res/jakepoirier.jpg" id="jakep" />
-                    </div>
-                    <div class="article column3">
-                        <p>Column Three</p>
-                    </div>
+            <h1><img src="res/ECE_logo.png" width="95px" height="95px" > Jake Lord</h1>
+            <div class="team_div">
+                <div class="team_text team_text_1">
+                    <p>
+                        Jake L. is a Senior Computer engineering student at Colorado State University.
+                        He is interested in....
+                    </p>
+                </div>
+                <div class="team_pic_div">
+                    <img src="res/jakelord.jpg" class="team_pic" width="320px" height="320px" />
                 </div>
             </div>
         </div>
@@ -189,12 +227,7 @@
     <div class="section" id="section3">
         <div class="container-fluid">
             <div id="content">
-                <div id="feature">
-                    <img src="res/grouppic.jpg" id="group" height="200" width="200"/>
-                    <p>
-                        This is the team blah blah blah
-                    </p>
-                </div>
+                <h1><img src="res/ECE_logo.png" width="95px" height="95px" > Jake Poirier</h1>
                 <div class="article column1">
                     <img src="res/grouppic.jpg" id="group" height="200" width="200"/>
                     <p>
@@ -202,9 +235,11 @@
                     </p>
                 </div>
                 <div class="article column2">
+                    <img src="res/grouppic.jpg" id="group" height="200" width="200"/>
                     <p>Column Two</p>
                 </div>
                 <div class="article column3">
+                    <img src="res/grouppic.jpg" id="group" height="200" width="200"/>
                     <p>Column Three</p>
                 </div>
             </div>
